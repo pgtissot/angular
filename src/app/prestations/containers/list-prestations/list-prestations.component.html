@@ -1,0 +1,10 @@
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <th scope="col" *ngFor="let item of headers">{{ item }}</th>
+    </thead>
+    <tbody>
+      <app-item-prestation *ngFor="let obj of collection" [item]="obj"></app-item-prestation>
+    </tbody>
+  </table>
+</div>
