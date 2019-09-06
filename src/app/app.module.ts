@@ -7,6 +7,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RoutingModule } from './routing.module';
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { HttpClientModule } from '@angular/common/http';
+
 
 registerLocaleData(localeFr, 'fr');
 
@@ -19,7 +24,10 @@ registerLocaleData(localeFr, 'fr');
     NgbModule,
     RoutingModule,
     UiModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+    HttpClientModule
   ],
   providers: [{provide: LOCALE_ID, useValue: 'fr-FR'}],
   bootstrap: [AppComponent]

@@ -1,0 +1,11 @@
+<div class="table-responsive" id="tableau">
+  <table class="table">
+    <thead>
+      <th scope="col" *ngFor="let item of headers">{{ item }}</th>
+    </thead>
+    <tbody>
+      <!-- Projection d'un template -->
+      <ng-content></ng-content>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+<tr>
+  <td>{{ item.name }}</td>
+  <td>{{ item.email }}</td>
+  <td [appState]="item.state">
+    <div class="form-group">
+      <select class="form-control" (change)="changeState($event, item)">
+        <option *ngFor="let state of states | keyvalue" [value]="state.value"
+          [selected]="item.state === state.value">{{ state.value }}</option>
+      </select>
+    </div>
+  </td>
+  <td (click)="update($event)">Action</td>
+</tr>

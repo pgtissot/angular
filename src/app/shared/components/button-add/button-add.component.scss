@@ -1,0 +1,22 @@
+@import '~src/variables';
+
+button {
+  padding: 5px 10px;
+  border: none;
+  a {
+    color: $light-color;
+    text-decoration: none;
+  }
+}
+
+:host {
+  margin-left: 10px;
+}
+
+:host-context(app-template1) button {
+  background: $palette-color-three;
+}
+
+:host-context(app-template2) button {
+  background: $palette-color-one;
+}

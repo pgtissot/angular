@@ -1,0 +1,35 @@
+<div class="container">
+  <form [formGroup]="formPrestation" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="typePresta">Type de prestation</label>
+      <input type="text" class="form-control" id="typePresta" formControlName="typePresta"/>
+    </div>
+    <div class="form-group">
+      <label for="client">Client</label>
+      <input type="text" class="form-control" id="client" formControlName="client"/>
+    </div>
+    <div class="form-group">
+      <label for="nbJours">Nombre de jours</label>
+      <input type="number" class="form-control" id="nbJours" formControlName="nbJours"/>
+    </div>
+    <div class="form-group">
+      <label for="tjmHt">Taux Jour/Homme HT</label>
+      <input type="number" class="form-control" id="tjmHt" formControlName="tjmHt"/>
+    </div>
+    <div class="form-group">
+      <label for="tauxTva">Taux TVA</label>
+      <input type="number" class="form-control" id="tauxTva" formControlName="tauxTva"/>
+    </div>
+    <div class="form-group">
+      <label for="state">State</label>
+      <select class="form-control" id="state" formControlName="state">
+        <option *ngFor="let state of states | keyvalue" [value]="state.value">{{ state.value }}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="comment">Commentaire</label>
+      <input type="text" class="form-control" id="comment" formControlName="comment"/>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

@@ -1,6 +1,6 @@
 import { Prestation } from 'src/app/shared/models/prestation';
 
-export const fakeCollection: Prestation[] = [
+export const fakePrestationsCollection: Prestation[] = [
   new Prestation({
     id: 'lkjsdf',
     client: 'Atos',

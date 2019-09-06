@@ -1,0 +1,19 @@
+@import '~src/variables';
+
+#tableau .state-annule,
+#tableau .state-inactif {
+  background: $palette-color-two;
+}
+
+#tableau .state-confirme,
+#tableau .state-actif {
+  background: $palette-color-four;
+}
+
+#tableau .state-option {
+  background: $palette-color-three;
+}
+
+#tableau tbody>* {
+  display: contents;
+}

@@ -1,5 +1,4 @@
 import { Directive, Input, HostBinding, OnChanges } from '@angular/core';
-import { buildPath } from 'selenium-webdriver/http';
 
 @Directive({
   selector: '[appState]'
@@ -13,7 +12,6 @@ export class StateDirective implements OnChanges {
 
   ngOnChanges() {
      this.className = this.formatClass(this.appState);
-
   }
 
   formatClass(state): string {
